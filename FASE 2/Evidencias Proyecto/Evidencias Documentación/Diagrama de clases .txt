@@ -1,0 +1,67 @@
+@startuml
+
+
+
+title Diagrama de clases
+
+
+class Administrador {
+
+- id : integer
+- nombre : string
+- apellido : string
+- correo : string
+- contrasena : string
+
++ Administrador()
++ Administrador(id, nombre, apellido, correo, contrasena)
+
++ string getNombre()
++ void setNombre(nombre)
+}
+
+
+class Tecnico{
+
+- id : integer
+- nombre : string
+- apellido : string
+- correo : string
+- contrasena : string
+
++ Tecnico()
++ Tecnico(id, nombre, apellido, correo, contrasena)
+
++ string getNombre()
++ void setNombre(nombre)
+}
+
+
+class Mantenimiento{
+- id : integer
+
+
++ Mantenimiento()
++ Mantenimiento(id)
+}
+
+
+
+
+
+
+
+class Bus{
+- patente : string
+- marca :string
+- modelo :string
+
++ Bus()
++ Bus(patente,marca,marca)
+}
+
+Mantenimiento <|--- Tecnico
+Bus <|--- Mantenimiento
+Tecnico <|--- Administrador
+Bus <|--- Administrador
+@enduml
